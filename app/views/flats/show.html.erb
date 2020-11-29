@@ -1,6 +1,10 @@
 <nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <a class="btn btn-outline-primary">Add Flat</a>
+  <a class="navbar-brand" href="#">Simple Airbnb - Oscar</a>
+
+  <div class="flats-options">
+    <%= link_to('Add Flat', new_flat_path, class: "btn btn-outline-primary") %>
+    <%= link_to('Edit Flat', edit_flat_path(@flat), class: "btn btn-outline-warning") %>
+  </div>
 </nav>
 
 <main>
