@@ -1,5 +1,6 @@
 <nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand" href="#">Simple Airbnb - Oscar</a>
+  <%= link_to('Simple Airbnb - Oscar', flats_path, class: "navbar-brand") %>
+  <%# <a class="navbar-brand" href="#">Simple Airbnb - Oscar</a> %>
 
   <div class="flats-options">
     <%= link_to('Add Flat', new_flat_path, class: "btn btn-outline-primary") %>
@@ -8,8 +9,7 @@
 </nav>
 
 <main>
-  <section class="map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4964.830146934008!2d-0.1829071388731061!3d51.5239463601291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761aa8b8a56fab%3A0x81d846cf9d085828!2s10%20Clifton%20Gardens%2C%20Little%20Venice%2C%20London%20W9%201DT%2C%20Reino%20Unido!5e0!3m2!1spt-BR!2sbr!4v1606647479894!5m2!1spt-BR!2sbr" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+  <section class="map background-image" style="background-image: url(<%=@flat.picture_url%>)">
   </section>
   <section class="main-content">
     <div class="container ">
@@ -25,6 +25,7 @@
             <div class="card-body">
               <h2 class="card-title h5 m-0">A bit more about this flat</h1>
               <p class="my-1 text-muted">A lovely summer fell for this flat...</p>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4964.830146934008!2d-0.1829071388731061!3d51.5239463601291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761aa8b8a56fab%3A0x81d846cf9d085828!2s10%20Clifton%20Gardens%2C%20Little%20Venice%2C%20London%20W9%201DT%2C%20Reino%20Unido!5e0!3m2!1spt-BR!2sbr!4v1606647479894!5m2!1spt-BR!2sbr" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </div>
           </div>
           <div class="card mb-3">
@@ -59,17 +60,15 @@
                       <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="29/11/2020">
                     </div>
                   </div>
-                  <div class="col-auto my-2">
-                    <button type="submit" class="btn btn-success btn-lg btn-block">Book</button>
-                  </div>
+                  <button type="submit" class="btn btn-success btn-lg btn-block">Book</button>
                 </div>
               </form>
             </div>
           </div>
           <div class="card mb-3">
-            <div class="card-body bg-white d-flex justify-content-between">
-              <p class="font-weight-bold mb-0">Share</p>
-              <span class="mb-0" style="font-size: 20px">
+            <div class="card-body bg-white d-flex justify-content-between align-items-center">
+              <span class="font-weight-bold">Share</span>
+              <span style="font-size: 20px">
                 <i class="fab fa-facebook-square"></i>
                 <i class="fab fa-twitter-square"></i>
                 <i class="fab fa-pinterest-square"></i>
