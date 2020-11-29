@@ -1,1 +1,19 @@
-<h1>new view</h1>
+<nav class="navbar navbar-light bg-light">
+  <span class="navbar-brand mb-0 h1">Simple Airbnb</span>
+</nav>
+
+<div class="container">
+  <h1>Your flat</h1>
+  
+  <%= simple_form_for(@flat) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :description %>
+    <%= f.input :price_per_night %>
+    <%= f.input :number_of_guests %>
+    <div class="d-flex justify-content-between">
+      <%= f.submit 'Save', class: "btn btn-primary" %>
+      <%= link_to 'Back to flat list', flats_path, class: "btn btn-outline-primary" %>
+    </div>
+  <% end %>
+</div>
